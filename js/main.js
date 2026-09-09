@@ -16,13 +16,13 @@ if (typeof (jQuery) !== 'undefined') {
       return cloneP;
     }
 
-    const step = 0.1;
     const initPheartW = 32;
     const scaleRate = 17/600;
     const smRate = 0.5;
 
     //draw heart
     const drawBigHeart = () => {
+      const step = $(window).width() > 640 ? 0.1 : 0.15;
       const bWith = bigHeart.width();
       const bHeight = bigHeart.height();
       const scale = scaleRate * bWith;

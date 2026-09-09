@@ -41,7 +41,7 @@ if (typeof (jQuery) !== 'undefined') {
 
     // make random firebody
     const makeRandFire = () => {
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 5; i++) {
         const randX = Math.random() * 100;
         const randStop = Math.random() * 100;
 
