@@ -37,8 +37,8 @@ if (typeof (jQuery) !== 'undefined') {
 
     let intervalFire = null;
 
-    const clearBox = () => {
-      if (intervalFire !== null) {
+    const clearBox = (clearInterval) => {
+      if (clearInterval && intervalFire !== null) {
         clearInterval(intervalFire);
       }
       fireworkBox.empty();
@@ -77,14 +77,14 @@ if (typeof (jQuery) !== 'undefined') {
     }
 
     intervalFire = setInterval(() => {
-      clearBox();
+      clearBox(false);
       makeRandFire();
     }, 10000);
 
     makeRandFire();
 
     $(window).on('resize', () => {
-      clearBox();
+      clearBox(true);
       makeRandFire();
     });
     
