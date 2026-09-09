@@ -1,9 +1,9 @@
 body {
-	height: 100vh;
+	min-height: 100vh;
 	margin: 0;
 	font-family: "Montserrat", "Roboto", sans-serif;
 	position: relative;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .d-none {
@@ -17,6 +17,7 @@ body {
 
 #main {
 	height: 100%;
+	min-height: 100vh;
 	background: #252525;
 	display: flex;
 	align-items: center;
