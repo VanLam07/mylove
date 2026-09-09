@@ -123,8 +123,14 @@ body {
     font-size: 48px;
     transform: translateX(0);
   }
+  95% {
+    opacity: 0;
+    font-size: 32px;
+    transform: translateX(0);
+  }
   100% {
     opacity: 0;
+    font-size: 14px;
     transform: translateX(0);
   }
 }
