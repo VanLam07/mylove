@@ -142,8 +142,8 @@ if (typeof (jQuery) !== 'undefined') {
         const star = $('<div class="star"></div>');
         const size = Math.random() * 2 + 1;
         star.css({
-          top: `${Math.random() * 60 + 2}%`,
-          left: `${Math.random() * 90 + 5}%`,
+          top: `${Math.random() * 60 + 2}dvh`,
+          left: `${Math.random() * 90 + 5}dvw`,
           width: `${size}px`,
           height: `${size}px`,
         });
