@@ -116,8 +116,9 @@ body {
 #moon {
   position: absolute;
   z-index: 48;
+  opacity: 0.8;
   top: 3dvh;
-  left: calc(50dvw - 240px);
+  left: calc(50dvw - 64px);
 }
 #moon img {
   width: 64px;
