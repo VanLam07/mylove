@@ -64,7 +64,7 @@ $nameSp: 100px;
 		text-align: center;
 		img {
 			width: 4px;
-			animation: heartScale 3s ease-out infinite;
+			animation: heartScale 3s ease-in-out infinite;
 		}
 	}
 }
@@ -120,19 +120,19 @@ $nameSp: 100px;
 		opacity: 0;
 		font-size: 14px;
 	}
-	90% {
+	80% {
 		opacity: 1;
 		font-size: 48px;
 		transform: translateX(0);
 	}
 	95% {
 		opacity: 0;
-		font-size: 32px;
+		font-size: 14px;
 		transform: translateX(0);
 	}
 	100% {
 		opacity: 0;
-		font-size: 14px;
+		font-size: 0px;
 		transform: translateX(0);
 	}
 }
