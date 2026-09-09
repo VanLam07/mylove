@@ -3,7 +3,7 @@ if (typeof (jQuery) !== 'undefined') {
 
     const fireworkBox = $('#fireworks');
 
-    const bgColors = ['#ff0040', '#00ff73', '#0084ff', '#ffeb3b', '#ff6b00'];
+    const bgColors = ['#ff0040', '#00ff73', '#0084ff', '#ffeb3b', '#ff6b00', '#ff00dd', '#bb00ff'];
 
     const makeFirebody = (randX) => {
       const bg = bgColors[Math.floor(Math.random() * bgColors.length)];
