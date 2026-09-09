@@ -3,7 +3,7 @@ body {
 	margin: 0;
 	font-family: "Montserrat", "Roboto", sans-serif;
 	position: relative;
-	// overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 .d-none {
@@ -126,8 +126,8 @@ $nameSp: 100px;
 	z-index: 101;
 	opacity: 0.8;
 	top: 3dvh;
-	left: 50%;
-	transform: translateX(-200px);
+	left: -64px;
+	animation: moon 60s linear infinite;
 	img {
 		width: 64px;
 	}
@@ -210,6 +210,15 @@ $nameSp: 100px;
 	}
 	100% {
 		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes moon {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(100dvw + 64px));
 	}
 }
 
