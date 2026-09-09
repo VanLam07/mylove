@@ -19,10 +19,12 @@ if (typeof (jQuery) !== 'undefined') {
     const initPheartW = 32;
     const scaleRate = 17/600;
     const smRate = 0.5;
+    let numSpread = 5;
 
     //draw heart
     const drawBigHeart = () => {
       const step = $(window).width() > 640 ? 0.1 : 0.15;
+      numSpread = $(window).width() > 640 ? 5 : 3;
       const bWith = bigHeart.width();
       const bHeight = bigHeart.height();
       const scale = scaleRate * bWith;
@@ -63,8 +65,8 @@ if (typeof (jQuery) !== 'undefined') {
 
     // Tạo cụm time lan tỏa
     const pointSpread = (px, py, pxSm, pySm) => {
-      // make 5 sub point
-      for (let i = 0; i < 5; i++) {
+      // make num sub point
+      for (let i = 0; i < numSpread; i++) {
         setTimeout(() => {
           const randPx = pxSm + randPos();
           const randPy = pySm + randPos();
