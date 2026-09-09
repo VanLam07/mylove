@@ -94,8 +94,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(100% - 100px);
-  height: calc(100% - 100px);
 }
 #my-image img {
   width: 100%;
@@ -171,6 +169,12 @@ body {
   }
   100% {
     transform: translate(0px, 0px);
+  }
+}
+@media screen and (min-width: 640px) {
+  #my-image {
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
   }
 }
 @media screen and (max-width: 640px) {
