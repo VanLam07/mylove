@@ -184,3 +184,10 @@ $nameSp: 100px;
 		transform: translate(0px, 0px);
 	}
 }
+
+@media screen and (max-width: 640px) {
+	#my-image {
+		width: calc(100% - 50px);
+		height: calc(100% - 50px);
+	}
+}
