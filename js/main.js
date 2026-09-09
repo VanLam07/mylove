@@ -64,7 +64,7 @@ if (typeof (jQuery) !== 'undefined') {
     // Tạo cụm time lan tỏa
     const pointSpread = (px, py, pxSm, pySm) => {
       // make 5 sub point
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 5; i++) {
         setTimeout(() => {
           const randPx = pxSm + randPos();
           const randPy = pySm + randPos();
