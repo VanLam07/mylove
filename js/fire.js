@@ -3,10 +3,6 @@ if (typeof (jQuery) !== 'undefined') {
 
     const fireworkBox = $('#fireworks');
 
-    const clearBox = () => {
-      fireworkBox.empty();
-    }
-
     const bgColors = ['#ff0040', '#00ff73', '#0084ff', '#ffeb3b', '#ff6b00'];
 
     const makeFirebody = (randX) => {
@@ -37,6 +33,15 @@ if (typeof (jQuery) !== 'undefined') {
 
         fireWork.appendTo(fireworkBox);
         return fireWork;
+    }
+
+    let intervalFire = null;
+
+    const clearBox = () => {
+      if (intervalFire !== null) {
+        clearInterval(intervalFire);
+      }
+      fireworkBox.empty();
     }
 
     // make random firebody
@@ -71,7 +76,7 @@ if (typeof (jQuery) !== 'undefined') {
       }
     }
 
-    setInterval(() => {
+    intervalFire = setInterval(() => {
       clearBox();
       makeRandFire();
     }, 10000);
