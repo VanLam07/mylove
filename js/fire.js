@@ -48,7 +48,7 @@ if (typeof (jQuery) !== 'undefined') {
     const makeRandFire = () => {
       for (let i = 0; i < 5; i++) {
         const randX = Math.random() * 96 + 2;
-        const randStop = Math.random() * 100;
+        const randStop = Math.random() * 90 + 10;
 
         const fireBody = makeFirebody(randX);
         const fireWork = makeFireWork(randX, randStop);
@@ -76,16 +76,32 @@ if (typeof (jQuery) !== 'undefined') {
       }
     }
 
-    intervalFire = setInterval(() => {
-      clearBox(false);
-      makeRandFire();
-    }, 10000);
+    const runFire = () => {
+      intervalFire = setInterval(() => {
+        clearBox(false);
+        makeRandFire();
+      }, 10000);
+    }
 
     makeRandFire();
+    runFire();
 
     $(window).on('resize', () => {
       clearBox(true);
       makeRandFire();
+      runFire();
+    });
+
+    // Lắng nghe sự kiện chuyển Tab của trình duyệt
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') {
+        // Tab bị ẩn hoặc thu nhỏ -> Dừng animation
+        clearBox(true);
+      } else {
+        // Tab được mở lại -> Tiếp tục animation
+        makeRandFire();
+        runFire();
+      }
     });
     
   })

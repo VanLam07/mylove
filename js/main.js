@@ -118,5 +118,19 @@ if (typeof (jQuery) !== 'undefined') {
     $(window).on('resize', resize);
     resize();
 
+    // Lắng nghe sự kiện chuyển Tab của trình duyệt
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') {
+        // Tab bị ẩn hoặc thu nhỏ -> Dừng animation
+        if (timeoutReize !== null) {
+          clearTimeout(timeoutReize);
+        }
+        bigHeart.find('.phearts').empty();
+      } else {
+        // Tab được mở lại -> Tiếp tục animation
+        resize();
+      }
+    });
+
   });
 }
