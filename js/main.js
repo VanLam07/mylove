@@ -24,7 +24,7 @@ if (typeof (jQuery) !== 'undefined') {
     //draw heart
     const drawBigHeart = () => {
       const step = $(window).width() > 640 ? 0.1 : 0.15;
-      // numSpread = $(window).width() > 640 ? 5 : 3;
+      numSpread = $(window).width() > 640 ? 5 : 3;
       const bWith = bigHeart.width();
       const bHeight = bigHeart.height();
       const scale = scaleRate * bWith;
@@ -74,27 +74,6 @@ if (typeof (jQuery) !== 'undefined') {
           subPoint.removeClass('d-none');
 
           subPoint[0].animate([
-            // {
-            //   left: randPx + 'px',
-            //   top: randPy + 'px',
-            //   opacity: 1,
-            //   transform: 'scale(0)',
-            //   offset: 0,
-            // },
-            // {
-            //   left: (px + randPx)/2 + 'px',
-            //   top: (py + randPy)/2 + 'px',
-            //   opacity: 1,
-            //   transform: 'scale(0.4)',
-            //   offset: 0.3
-            // },
-            // {
-            //   left: px + 'px',
-            //   top: py + 'px',
-            //   opacity: 0.1,
-            //   transform: 'scale(1)',
-            //   offset: 1,
-            // }
             {
               opacity: 1,
               transform: 'translate(0, 0) scale(0)',
