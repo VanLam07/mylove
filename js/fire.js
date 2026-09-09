@@ -37,8 +37,8 @@ if (typeof (jQuery) !== 'undefined') {
 
     let intervalFire = null;
 
-    const clearBox = (clearInterval) => {
-      if (clearInterval && intervalFire !== null) {
+    const clearBox = (clearInter) => {
+      if (clearInter && intervalFire !== null) {
         clearInterval(intervalFire);
       }
       fireworkBox.empty();
@@ -47,7 +47,7 @@ if (typeof (jQuery) !== 'undefined') {
     // make random firebody
     const makeRandFire = () => {
       for (let i = 0; i < 5; i++) {
-        const randX = Math.random() * 100;
+        const randX = Math.random() * 96 + 2;
         const randStop = Math.random() * 100;
 
         const fireBody = makeFirebody(randX);
