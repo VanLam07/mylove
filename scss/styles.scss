@@ -123,6 +123,7 @@ $nameSp: 100px;
 
 #moon {
 	position: absolute;
+	z-index: 48;
 	top: 3dvh;
 	left: calc(50dvw - 240px);
 	img {
