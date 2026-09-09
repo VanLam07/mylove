@@ -11,7 +11,7 @@ if (typeof (jQuery) !== 'undefined') {
           left: x,
           top: y,
         })
-        .appendTo(bigHeart);
+        .appendTo(bigHeart.find('.phearts'));
 
       return cloneP;
     }
@@ -83,7 +83,7 @@ if (typeof (jQuery) !== 'undefined') {
               left: (px + randPx)/2 + 'px',
               top: (py + randPy)/2 + 'px',
               opacity: 1,
-              transform: 'scale(0.3)',
+              transform: 'scale(0.4)',
               offset: 0.3
             },
             {
@@ -101,20 +101,22 @@ if (typeof (jQuery) !== 'undefined') {
       }
     }
 
-    drawBigHeart();
-
     let timeoutReize = null;
     const resize = () => {
       if (timeoutReize !== null) {
         clearTimeout(timeoutReize);
       }
       timeoutReize = setTimeout(() => {
-        bigHeart.html('');
-        drawBigHeart();
-      }, 500);
+        bigHeart.find('.phearts').empty();
+        bigHeart.height(bigHeart.width());
+        setTimeout(() => {
+          drawBigHeart();
+        }, 50);
+      }, 300);
     }
 
     $(window).on('resize', resize);
+    resize();
 
   });
 }
