@@ -71,6 +71,7 @@ body {
   width: min(640px, 100% - 16px);
   height: 640px;
   position: relative;
+  z-index: 50;
   animation: heartbeat 3s ease-in-out infinite;
 }
 #big-heart .pheart {
@@ -110,6 +111,26 @@ body {
 
 .pheart.p-vibrate {
   animation: vibrate 3s ease-in-out infinite;
+}
+
+#moon {
+  position: absolute;
+  top: 3vh;
+  left: calc(50vh - 320px);
+}
+#moon img {
+  width: 64px;
+}
+
+#stars .star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px rgba(255, 255, 255, 0.8);
 }
 
 @keyframes textRun {

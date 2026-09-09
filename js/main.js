@@ -134,5 +134,24 @@ if (typeof (jQuery) !== 'undefined') {
       }
     });
 
+
+    // stars
+    const makeStars = () => {
+      const startsBox = $('#stars');
+      for (let i = 0; i < 20; i++) {
+        const star = $('<div class="star"></div>');
+        const size = Math.random() * 2 + 1;
+        star.css({
+          top: `${Math.random() * 60 + 2}vh`,
+          left: `${Math.random() * 90 + 5}vw`,
+          width: `${size}px`,
+          height: `${size}px`,
+        });
+        star.appendTo(startsBox);
+      }
+    }
+
+    makeStars();
+
   });
 }
