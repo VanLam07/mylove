@@ -82,6 +82,11 @@ if (typeof (jQuery) !== 'undefined') {
     }, 10000);
 
     makeRandFire();
+
+    $(window).on('resize', () => {
+      clearBox();
+      makeRandFire();
+    });
     
   })
 }

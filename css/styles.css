@@ -3,7 +3,6 @@ body {
   margin: 0;
   font-family: "Montserrat", "Roboto", sans-serif;
   position: relative;
-  overflow-x: hidden;
 }
 
 .d-none {
