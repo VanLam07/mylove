@@ -84,6 +84,7 @@ body {
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
 }
 .text-love span {
   color: #ff006c;
