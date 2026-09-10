@@ -65,7 +65,7 @@ body {
   text-align: center;
 }
 #title .heart-name img {
-  width: 4px;
+  width: 16px;
   animation: heartScale 3s ease-in-out infinite;
 }
 
@@ -161,7 +161,7 @@ body {
     transform: scale(1);
   }
   90% {
-    transform: scale(12);
+    transform: scale(3);
   }
   100% {
     transform: scale(1);

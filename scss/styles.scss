@@ -71,7 +71,7 @@ $nameSp: 100px;
 		min-width: 64px;
 		text-align: center;
 		img {
-			width: 4px;
+			width: 16px;
 			animation: heartScale 3s ease-in-out infinite;
 		}
 	}
@@ -174,7 +174,7 @@ $nameSp: 100px;
 		transform: scale(1);
 	}
 	90% {
-		transform: scale(12);
+		transform: scale(3);
 	}
 	100% {
 		transform: scale(1);
