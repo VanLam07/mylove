@@ -1,6 +1,10 @@
 if (typeof (jQuery) !== 'undefined') {
   jQuery(document).ready(function ($) {
 
+    setTimeout(() => {
+      $('#my-image').fadeIn();
+    }, 1000);
+
     const bigHeart = $('#big-heart');
 
     const makePoint = (x, y) => {
