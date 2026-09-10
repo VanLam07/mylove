@@ -24,7 +24,7 @@ if (typeof (jQuery) !== 'undefined') {
     //draw heart
     const drawBigHeart = () => {
       const step = $(window).width() > 640 ? 0.1 : 0.15;
-      numSpread = $(window).width() > 640 ? 5 : 3;
+      // numSpread = $(window).width() > 640 ? 5 : 3;
       const bWith = bigHeart.width();
       const bHeight = bigHeart.height();
       const scale = scaleRate * bWith;

@@ -83,7 +83,7 @@ $nameSp: 100px;
 	height: $hW;
 	position: relative;
 	z-index: 50;
-	animation: heartbeat 3s ease-in-out infinite;
+	animation: heartbeat 2.5s ease-out infinite;
 	.pheart {
 		position: absolute;
 		transform: scale(0.25);
@@ -171,13 +171,13 @@ $nameSp: 100px;
 
 @keyframes heartScale {
 	0% {
-		width: 4px;
+		transform: scale(1);
 	}
 	90% {
-		width: 64px;
+		transform: scale(12);
 	}
 	100% {
-		width: 4px;
+		transform: scale(1);
 	}
 }
 

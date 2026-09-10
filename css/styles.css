@@ -75,7 +75,7 @@ body {
   height: 640px;
   position: relative;
   z-index: 50;
-  animation: heartbeat 3s ease-in-out infinite;
+  animation: heartbeat 2.5s ease-out infinite;
 }
 #big-heart .pheart {
   position: absolute;
@@ -158,13 +158,13 @@ body {
 }
 @keyframes heartScale {
   0% {
-    width: 4px;
+    transform: scale(1);
   }
   90% {
-    width: 64px;
+    transform: scale(12);
   }
   100% {
-    width: 4px;
+    transform: scale(1);
   }
 }
 @keyframes vibrate {
