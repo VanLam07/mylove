@@ -46,7 +46,7 @@ body {
 }
 #title h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 14px;
   font-weight: 400;
   opacity: 0;
   text-shadow: 0 0 10px #ff006c, 0 0 20px #ff006c, 0 0 30px #ff006c, 0 0 40px #ff417d, 0 0 70px #ff417d, 0 0 80px #ff417d, 0 0 100px #ff417d, 0 0 150px #ff417d;
@@ -54,9 +54,11 @@ body {
 }
 #title .my-name {
   transform: translateX(-100px);
+  margin-right: 16px;
 }
 #title .her-name {
   transform: translateX(100px);
+  margin-left: 16px;
 }
 #title .heart-name {
   min-width: 64px;
@@ -140,22 +142,18 @@ body {
 @keyframes textRun {
   0% {
     opacity: 0;
-    font-size: 14px;
   }
   80% {
     opacity: 1;
-    font-size: 48px;
-    transform: translateX(0);
+    transform: translateX(0) scale(4);
   }
   95% {
     opacity: 0;
-    font-size: 14px;
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
   }
   100% {
     opacity: 0;
-    font-size: 0px;
-    transform: translateX(0);
+    transform: translateX(0) scale(1);
   }
 }
 @keyframes heartScale {

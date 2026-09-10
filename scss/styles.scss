@@ -53,7 +53,7 @@ $nameSp: 100px;
 	}
 	h1 {
 		margin: 0;
-		font-size: 48px;
+		font-size: 14px;
 		font-weight: 400;
 		opacity: 0;
 		text-shadow: 0 0 10px #ff006c, 0 0 20px #ff006c, 0 0 30px #ff006c, 0 0 40px #ff417d, 0 0 70px #ff417d, 0 0 80px #ff417d, 0 0 100px #ff417d, 0 0 150px #ff417d;
@@ -61,9 +61,11 @@ $nameSp: 100px;
 	}
 	.my-name {
 		transform: translateX(-$nameSp);
+		margin-right: 16px;
 	}
 	.her-name {
 		transform: translateX($nameSp);
+		margin-left: 16px;
 	}
 	.heart-name {
 		min-width: 64px;
@@ -152,22 +154,18 @@ $nameSp: 100px;
 @keyframes textRun {
 	0% {
 		opacity: 0;
-		font-size: 14px;
 	}
 	80% {
 		opacity: 1;
-		font-size: 48px;
-		transform: translateX(0);
+		transform: translateX(0) scale(4);
 	}
 	95% {
 		opacity: 0;
-		font-size: 14px;
-		transform: translateX(0);
+		transform: translateX(0) scale(1);
 	}
 	100% {
 		opacity: 0;
-		font-size: 0px;
-		transform: translateX(0);
+		transform: translateX(0) scale(1);
 	}
 }
 
