@@ -52,9 +52,7 @@ if (typeof (jQuery) !== 'undefined') {
         const pxSm = bWith / 2 + x * scale * smRate - initPheartW / 2;
         const pySm = bHeight / 2 - y * scale * smRate - initPheartW - 1.54 * (initPheartW / 2);
 
-        setTimeout(() => {
-          pointSpread(px, py, pxSm, pySm);
-        }, Math.random() * 2000);
+        pointSpread(px, py, pxSm, pySm);
       }
     }
 
@@ -67,33 +65,31 @@ if (typeof (jQuery) !== 'undefined') {
     const pointSpread = (px, py, pxSm, pySm) => {
       // make num sub point
       for (let i = 0; i < numSpread; i++) {
-        setTimeout(() => {
-          const randPx = pxSm + randPos();
-          const randPy = pySm + randPos();
-          const subPoint = makePoint(randPx, randPy);
-          subPoint.removeClass('d-none');
+        const randPx = pxSm + randPos();
+        const randPy = pySm + randPos();
+        const subPoint = makePoint(randPx, randPy);
+        subPoint.removeClass('d-none');
 
-          subPoint[0].animate([
-            {
-              opacity: 1,
-              transform: 'translate(0, 0) scale(0)',
-              offset: 0,
-            },
-            {
-              opacity: 1,
-              transform: `translate(${(px + randPx) / 2 - randPx}px, ${(py + randPy) / 2 - randPy}px) scale(0.4)`,
-              offset: 0.3
-            },
-            {
-              opacity: 0.1,
-              transform: `translate(${px - randPx}px, ${py - randPy}px) scale(1)`,
-              offset: 1,
-            }
-          ], {
-            duration: 1000 + Math.random() * 1000,
-            iterations: Infinity,
-          })
-        }, i * 50);
+        subPoint[0].animate([
+          {
+            opacity: 1,
+            transform: 'translate(0, 0) scale(0)',
+            offset: 0,
+          },
+          {
+            opacity: 1,
+            transform: `translate(${(px + randPx) / 2 - randPx}px, ${(py + randPy) / 2 - randPy}px) scale(0.4)`,
+            offset: 0.3
+          },
+          {
+            opacity: 0.1,
+            transform: `translate(${px - randPx}px, ${py - randPy}px) scale(1)`,
+            offset: 1,
+          }
+        ], {
+          duration: 1000 + Math.random() * 1000,
+          iterations: Infinity,
+        })
       }
     }
 
